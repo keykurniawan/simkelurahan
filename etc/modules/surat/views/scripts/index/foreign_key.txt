@@ -1,0 +1,37 @@
+cara foreign key pada sql
+
+ALTER TABLE coba
+ADD CONSTRAINT fk_nik FOREIGN KEY
+(nik) REFERENCES data_penduduk (nik);
+
+foreign key di pejabat_kelurahan
+ALTER TABLE pejabat_kelurahan
+ADD CONSTRAINT fk_1 FOREIGN KEY
+(id_kelurahan) REFERENCES kelurahan (id_kelurahan),
+ADD CONSTRAINT fk_2 FOREIGN KEY
+(id_jenis_pengguna) REFERENCES jenis_pengguna (id_jenis_pengguna);
+
+foreign key di pejabat_kelurahan
+
+ALTER TABLE pejabat_kelurahan
+ADD CONSTRAINT fk_1 FOREIGN KEY
+(id_kelurahan) REFERENCES kelurahan (id_kelurahan),
+ADD CONSTRAINT fk_2 FOREIGN KEY
+(id_jenis_pengguna) REFERENCES jenis_pengguna (id_jenis_pengguna);
+
+foreign key di pengguna
+
+ALTER TABLE pengguna
+ADD CONSTRAINT fk_3 FOREIGN KEY
+(id_kelurahan) REFERENCES kelurahan (id_kelurahan),
+ADD CONSTRAINT fk_4 FOREIGN KEY
+(id_jenis_pengguna) REFERENCES jenis_pengguna (id_jenis_pengguna);
+
+andon_nikah
+ALTER TABLE permintaan_domisili_parpol
+ADD CONSTRAINT fk_43 FOREIGN KEY
+(id_kelurahan) REFERENCES kelurahan (id_kelurahan),
+ADD CONSTRAINT fk_44 FOREIGN KEY
+(id_pejabat) REFERENCES pejabat_kelurahan (id_pejabat),
+ADD CONSTRAINT fk_45 FOREIGN KEY
+(nik) REFERENCES data_penduduk (nik);

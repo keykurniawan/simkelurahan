@@ -1,0 +1,113 @@
+<? include "header.phtml"; ?>
+<? include "menubar.phtml"; ?>
+<?// include "barkanan.phtml"; ?>
+      <div id="contentadmin">
+        <h1><?php echo $this->surat;?></h1>
+		<?php
+			if($this->hasil){
+		?>
+		<form action="<? echo $this->basePath;?>/surat/index/simpanpermintaanlahir	" method="post">
+		<div class="form_settings2">
+			
+			<table>
+				<tr>
+					<td>NIK</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="nik" value="<?php echo $this->hasil->nik; ?>" placeholder="" readonly /></td>
+				</tr>
+				<tr>
+					<td>Nama</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="nama" value="<?php echo $this->hasil->nama; ?>" placeholder="" readonly /></td>
+				</tr>
+				<tr>
+					<td>Nomor KK</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="no_kk" value="<?php echo $this->hasil->no_kk; ?>" placeholder="" readonly /></td>
+				</tr>
+				<tr>
+					<td>Alamat</td>
+					<td>:</td>
+					<td><textarea name="alamat" readonly ><?php echo $this->hasil->alamat; ?></textarea></td>
+				</tr>
+				<tr>
+					<td>Tempat/Tanggal Lahir</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="tempat_lahir" value="<?php echo $this->hasil->tempat_lahir; ?>" placeholder="" readonly /> &nbsp /&nbsp <input width="1px" type="date" name="tanggal_lahir" value="<?php echo $this->hasil->tanggal_lahir; ?>" placeholder="" readonly /></td>
+				</tr>
+				<tr>
+					<td>Agama</td>
+					<td>:</td>
+					<td><input type="text" name="agama" value="<?php echo $this->hasil->agama; ?>"  readonly />	</td>
+				</tr>
+				<tr>
+					<td>Jenis Kelamin</td>
+					<td>:</td>
+					<td><input type="text" name="jenis_kelamin" value="<?php echo $this->hasil->jenis_kelamin; ?>"  readonly />	</td>
+					</td>
+				</tr>
+				<tr>
+					<td>Pekerjaan</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="pekerjaan" value="<?php echo $this->hasil->pekerjaan; ?>" placeholder="" readonly /></td>
+				</tr>
+				
+					<td>Nomor Surat</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="no_surat" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Tanggal Surat</td>
+					<td>:</td>
+					<td><input width="1px" type="date" name="tanggal_surat" value="<? echo date('Y-m-d');?>" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Nomor Surat Pengantar</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="no_surat_pengantar" value="" placeholder=""/>
+					&nbsp &nbsp RT / RW &nbsp &nbsp
+					<input width="0" type="text" name="rt" value="<?php echo $this->hasil->rt; ?>" placeholder="" readonly /> &nbsp /&nbsp
+					<input width="1px" type="text" name="rw" value="<?php echo $this->hasil->rw; ?>" placeholder="" readonly />
+					</td>
+				</tr>
+				<tr>
+					<td>Tanggal Surat Pengantar</td>
+					<td>:</td>
+					<td><input width="1px" type="date" name="tanggal_surat_pengantar" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+				<tr>
+					<td>Ketua Pemberdayaan</td>
+					<td>
+						<select name="id_pejabat">
+							<option value="<?php echo $this->pejabat->id_pejabat; ?>"></option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>NIP Pejabat Kelurahan</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="nip_pejabat" value="<?php echo $this->pejabat->nip_pejabat; ?>" placeholder="" readonly /></td>
+				</tr>
+				<tr>
+					<td>Nama Pejabat Kelurahan</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="nama_pejabat" value="<?php echo $this->pejabat->nama_pejabat; ?>" placeholder="" readonly /></td>
+				</tr>
+			</table>
+				
+				<input class="button" type="submit" name="name" value="tambah" />
+			 </div>
+		</form>
+		<?php
+		}else{
+			echo "<h4>Penduduk Belum terdaftar</h4>";
+		
+		?>
+			<h7><a href="<? echo $this->basePath;?>/surat/index/tambahpenduduk"> daftarkan</a></h7>
+		<?php } ?>
+		<br><br><br>
+      </div>
+	 </div>
+	
+   <?//include "footer.phtml"; ?>

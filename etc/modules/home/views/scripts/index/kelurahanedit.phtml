@@ -1,0 +1,31 @@
+<? include "header.phtml"; ?>
+<? include "menubaradmin.phtml"; ?>
+<?// include "barkanan.phtml"; ?>
+      <div class="content">
+        <h1>Edit Kelurahan</h1>
+			<form action="<? echo $this->basePath;?>/home/index/simpankelurahanedit?id_kelurahan=<?php echo $this->kelurahan->id_kelurahan ?>" method="post">
+			  <div class="form_settings">
+				</select>
+				<!--
+				<br><br>Kode Kelurahan :<br>
+				<input type="text" name="kode_kelurahan" value="" placeholder="masukan kode kelurahan"/>
+				-->
+				<br><br>Nama Kelurahan :<br>
+				<input type="text" name="nama_kelurahan" value="<?php echo $this->kelurahan->nama_kelurahan ?>" />
+				<br><br>Nama Lurah :<br>
+				<input type="text" name="nama_lurah" value="<?php echo $this->kelurahan->nama_lurah ?>" placeholder="masukan nama kelurahan"/>
+				<br><br>Kecamatan :<br>
+				<input type="text" name="kecamatan" value="<?php echo $this->kelurahan->kecamatan ?>" placeholder="masukan nama kelurahan"/>
+				<br><br>Alamat :<br>
+				<input type="text" name="alamat" value="<?php echo $this->kelurahan->alamat ?>" placeholder="masukan nama kelurahan"/>
+				<br><br>Nomor Telepon :<br>
+				<input type="text" name="no_telepon" value="<?php echo $this->kelurahan->no_telepon ?>" placeholder="masukan nama kelurahan"/>
+				<br><br>Kode Pos :<br>
+				<input type="text" name="kode_pos" value="<?php echo $this->kelurahan->kode_pos ?>" placeholder="masukan nama kelurahan"/>
+				<br><br><p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="name" value="selesai" /></p>
+			  </div>
+			</form><br><br></center>
+      </div>
+	 </div>
+	
+   <?//include "footer.phtml"; ?>

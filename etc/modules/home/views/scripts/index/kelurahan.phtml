@@ -1,0 +1,41 @@
+<? include "header.phtml"; ?>
+<? include "menubaradmin.phtml"; ?>
+<?// include "barkanan.phtml"; ?>
+      <div id="contentadmin">
+        <h1>Data Kelurahan</h1>
+		<table style="width:100%; border-spacing:0;">
+          <tr align ="center">
+			  <th>Nomor</th>
+			  <th>Nama Kelurahan</th>
+			  <th>Nama Lurah</th>
+			  <th>Kecamatan</th>
+			  <th>Alamat</th>
+			  <th>Nomor Telepon</th>
+			  <th>Kode POS</th>
+			  
+			  <th colspan=2>Aksi</th>
+		  </tr>
+		  <?php $i=1; foreach($this->kelurahan as $data) : ?>
+			<tr>
+			<td><?php echo $i;?></td>	
+            <td><?php echo $this->escape($data->nama_kelurahan);?></td>
+            <td><?php echo $this->escape($data->nama_lurah);?></td>
+            <td><?php echo $this->escape($data->kecamatan);?></td>
+            <td><?php echo $this->escape($data->alamat);?></td>
+            <td><?php echo $this->escape($data->no_telepon);?></td>
+            <td><?php echo $this->escape($data->kode_pos);?></td>
+           
+			
+			
+            <td><a href="<?php echo $this->basePath; ?>/home/index/kelurahanedit?id_kelurahan=<?php echo $this->escape($data->id_kelurahan);?>"><img src="<? echo $this->basePath;?>/images/user_edit.png" alt="" title="" border="0" /></a></td>
+            <td><a href="<?php echo $this->basePath; ?>/home/index/kelurahanhapus?id_kelurahan=<?php echo $this->escape($data->id_kelurahan);?>"class="ask"><img src="<? echo $this->basePath;?>/images/trash.png" alt="" title="" border="0" /></a></td>
+		
+			
+        </tr>
+		<?php $i++; endforeach; ?>
+          
+        </table>
+      </div>
+	 </div>
+	
+   <?//include "footer.phtml"; ?>

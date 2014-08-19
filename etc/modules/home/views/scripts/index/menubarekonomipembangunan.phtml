@@ -1,0 +1,22 @@
+	
+	<nav>
+        <ul class="sf-menu" id="nav">
+          <li><a href="#">Surat Keteranagan</a>
+            <ul>
+              <li><a href="#">Ekonomi Pembangunan</a>
+				<ul>
+				   <?php foreach($this->ekonomipembangunan as $data): ?>
+					<li><a href="<? echo $this->basePath;?>/home/index/<?php  echo $this->escape($data->controller);  ?>?id_surat=<?php  echo $this->escape($data->id_surat);  ?>"><?php echo $this->escape($data->nama_surat); ?></a></li>
+				  <?php endforeach; ?>
+                </ul>
+			  </li>
+            </ul>
+          </li>
+		  <!--
+          <li><a href="#">Referensi</a></li>
+          <li><a href="#">Laporan</a></li>
+		  -->
+         <li><a href="<? echo $this->basePath;?>/home/index/logout">Logout</a></li>
+        </ul>
+    </nav>
+    </header>

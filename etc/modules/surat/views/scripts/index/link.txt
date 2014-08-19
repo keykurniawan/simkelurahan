@@ -1,0 +1,41 @@
+rs:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Crumashsakit.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&569494957
+
+sekolah:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Csekolah.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&-498163396
+
+ps:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Cps.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&1671989009
+
+janda:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Cjanda.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&1596858883
+
+ik:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Cijinkeramaian.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&-341805510
+
+ibadah haji:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Cibadahhaji.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&497747167
+
+bpr:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Cbpr.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&42294786
+
+andon nikah:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Candonnikah.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&-1988811304
+
+belum nikah:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Cbelummenikah.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&1723889063
+
+bd:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Cbd.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&1752468918
+
+dy:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Cdomisiliyayasan.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&-1638859551
+
+d.perusahaan:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Cdomisiliperusahaan.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&379069798
+
+d.parpol:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Cdomisiliparpol.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&1602274483
+
+k.usaha:
+http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Cketeranganusaha.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&281928161

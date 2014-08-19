@@ -1,0 +1,24 @@
+<? include "header.phtml"; ?>
+<? include "menubaradmin.phtml"; ?>
+<?// include "barkanan.phtml"; ?>
+      <div class="content">
+        <h1>Tambah Surat</h1>
+			<form action="<? echo $this->basePath;?>/home/index/simpansurat" method="post">
+			  <div class="form_settings">
+				</select>
+				<br>Nama Surat :<br>
+				<input type="text" name="nama_surat" value="" placeholder="masukan nama surat"/>
+				<br>Jenis Surat :<br>
+				<select name="id_jenis_surat">
+					<?php foreach($this->jenissurat as $data):?>
+					<option value="<?php echo $this->escape($data->id_jenis_surat)?>"><?php echo $this->escape($data->nama_jenis_surat);?></option>
+					<?php endforeach;?>
+				</select>
+				<br><br><p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="name" value="selesai" /></p>
+				
+			  </div>
+			</form><br><br></center>
+      </div>
+	 </div>
+	
+   <?//include "footer.phtml"; ?>

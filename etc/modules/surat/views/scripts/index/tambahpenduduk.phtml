@@ -1,0 +1,139 @@
+<? include "header.phtml"; ?>
+<? include "menubar.phtml"; ?>
+<?// include "barkanan.phtml"; ?>
+      <div id="contentadmin">
+        <h1><?php echo $this->surat;?></h1>
+		<form action="<? echo $this->basePath;?>/surat/index/simpanpenduduk" method="post">
+		<div class="form_settings2">
+			<table>
+				<tr>
+					<td>Nomor KK</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="no_kk" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Nama Kepala Keluarga</td>
+					<td>:</td>
+					<td><input width="1px" type="nama_kep" name="nama_kep" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Alamat</td>
+					<td>:</td>
+					<td><textarea name="alamat"></textarea>
+					&nbsp &nbsp RT / RW &nbsp &nbsp
+					<input width="0" type="text" name="rt" value="" placeholder=""/> &nbsp /&nbsp
+					<input width="1px" type="text" name="rw" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Dusun</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="dusun" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Kode POS</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="kode_pos" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>NIK</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="nik" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Nama Lengkap</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="nama_lengkap" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Jenis Kelamin</td>
+					<td>:</td>
+					<td>
+						<select name="jk">
+							<option value="Laki-laki">Laki-laki</option>
+							<option value="Perempuan">Perempuan</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Tempat/Tanggal Lahir</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="tempat_lahir" value="" placeholder=""/> &nbsp /&nbsp <input width="1px" type="date" name="tgl_lahir" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Nomor Akta</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="no_akta" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Golongan Darah</td>
+					<td>:</td>
+					<td>
+						<select name="gol_darah">
+							<option value="O">O</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="AB">AB</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Agama</td>
+					<td>:</td>
+					<td>
+						<select name="agama">
+							<option value="Budha">Budha</option>
+							<option value="Hindu">Hindu</option>
+							<option value="Islam">Islam</option>
+							<option value="Kristen Katolik">Kristen Katolik</option>
+							<option value="Kristen Protestan">Kristen Protestas</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Pekerjaan</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="pekerjaan" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Nama Ibu</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="nama_ibu" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Nama Ayah</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="nama_ayah" value="" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Status</td>
+					<td>:</td>
+					<td>
+						<select name="status">
+							<option value="Menikah">Menikah</option>
+							<option value="Belum Menikah">Belum Menikah</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>kelurahan</td>
+					<td>:</td>
+					<td>
+						<select name="id_kelurahan">
+						<?php foreach($this->kelurahan as $data) : ?>
+							<option value="<?php echo $data->id_kelurahan; ?>"><?php echo $data->nama_kelurahan; ?></option>
+						<? endforeach; ?>
+						</select>
+					</td>
+				</tr>
+				
+			</table>
+				
+				<input class="button" type="submit" name="name" value="tambah" />
+			 </div>
+		</form>
+		<br><br><br>
+      </div>
+	 </div>
+	
+   <?//include "footer.phtml"; ?>

@@ -1,0 +1,54 @@
+<? include "header.phtml"; ?>
+<? include "menubarpemberdayaan.phtml"; ?>
+<?// include "barkanan.phtml"; ?>
+	<?php
+		//echo $this->datauser->nama_pengguna;
+	?>
+      <div id="contentadmin">
+        <h1><u><b><?php echo "Halaman ". $this->jenispengguna->nama_jenis_pengguna;?></b></u></h1>
+         <? include "profilketua.phtml"; ?>
+		<table style="width:100%; border-spacing:0;">
+          <tr align ="center">
+			  <th>No</th>
+			  <th>No Surat</th>
+			  <th>Tgl Surat</th>
+			  <th>NIK</th>
+			  <th>Nama Warga</th>
+			  <th>RT / RW</th>
+			  <th>Nama Siswa</th>
+			  <th>Keperluan</th>
+			  <th colspan=3>Aksi</th>
+		  </tr>
+		 <?php $i=1; foreach($this->permintaan as $data) : ?>
+		
+			<tr>
+			<td><?php echo $i;?></td>		
+            <td><?php echo $this->escape($data->no_surat);?></td>
+            <td><?php echo $this->escape($data->tanggal_surat);?></td>
+            <td><?php echo $this->escape($data->nik);?></td>
+            <td><?php echo $this->escape($data->nama);?></td>
+            <td><?php echo $this->escape($data->rt);echo "/";echo $this->escape($data->rw);?></td>
+            <td><?php echo $this->escape($data->nama_siswa);?></td>
+            <td><?php echo $this->escape($data->keperluan);?></td>
+           
+			
+			
+                        
+			<?php if($data->status==0){ ?>
+            <td><a href="<?php echo $this->basePath; ?>/home/index/sekolahaccedit?id_permintaan=<?php echo $this->escape($data->id_permintaan_sekolah);?>">ACC</a></td>
+			<?php }else{ ?>
+			<td><img src="<? echo $this->basePath;?>/images/valid.png" alt="" title="" border="0" /></td>
+			<?php } ?>
+			
+        </tr>
+			
+		<?php $i++; endforeach; ?>
+          
+        
+	
+          
+        </table>
+      </div>
+	 </div>
+	
+   <?//include "footer.phtml"; ?>

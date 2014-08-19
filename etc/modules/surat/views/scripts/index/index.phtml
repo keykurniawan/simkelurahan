@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>SIM Kelurahan</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="<? echo $this->basePath;?>/css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <img src="<? echo $this->basePath;?>/images/logosimkel.png" alt="" title="" class="sidebar_icon_right" />
+        </div>
+      </div>
+    
+    </header>
+    <div id="login">
+		<h2><center>Panel Login</h2>
+		<div id="form">
+			<form action="<? echo $this->basePath;?>/home/index/home" method="post">
+			  <div class="form_settings">
+				<input type="text" name="username" value="" placeholder="masukan username"/><br><br>
+				<input type="password" name="password" value="" placeholder="masukan password"/><br><br>
+				<!--<h2><center>Pilih Jenis Pengguna</h2>
+				<select id="id" name="jenispengguna" >
+					<option value="1">admin</option>
+					<option value="2">umum</option>
+					<option value="3">Ketua Pemberdayaan</option>
+					<option value="4">Ketua Tentara Ketertiban</option>
+					<option value="5">Ketua Ekonomi Pembangunan</option>
+					<option value="6">Ketua Pemerintahan</option>
+				</select>
+				-->
+				<p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="name" value="login" title="Klik jika sudah mengisi username dan password"/></p>
+			  </div>
+			</form><br><br></center>
+		</div>
+    </div>
+    <footer>
+      <p>Sistem Informasi Manajemen Kelurahan Pemerintah Kota Cimahi 2013</p>
+    </footer>
+  </div>
+  <p>&nbsp;</p>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript" src="js/jquery.kwicks-1.5.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#images').kwicks({
+        max : 600,
+        spacing : 2
+      });
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+</body>
+</html>

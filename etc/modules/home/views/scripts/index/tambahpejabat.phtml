@@ -1,0 +1,41 @@
+<? include "header.phtml"; ?>
+<? include "menubaradmin.phtml"; ?>
+<?// include "barkanan.phtml"; ?>
+       <div id="contentadmin">
+        <h1>Tambah Pejabat Kelurahan</h1>
+			<form action="<? echo $this->basePath;?>/home/index/simpanpejabat" method="post">
+			  <div class="form_settings">
+				
+				Nama Pejabat Kelurahan :<br>
+				<input type="text" name="nama_pejabat" value="" placeholder="masukan nama pejabat kelurahan"/>
+				<br><br>NIP Pejabat Kelurahan :<br>
+				<input type="text" name="nip_pejabat" value="" placeholder="masukan nip pejabat kelurahan"/>
+								
+	
+				<br><br>Kelurahan :<br>
+				<select  name="id_kelurahan" >
+				<?php foreach($this->kelurahan as $data) : ?>
+					<option value="<?php echo $this->escape($data->id_kelurahan);?>"><?php echo $this->escape($data->nama_kelurahan);?></option>
+					
+				  
+				<?php endforeach; ?>
+				
+				</select>
+				
+				<br>Jabatan :<br>
+				<select name="id_jenis_pengguna" >
+				<?php foreach($this->jabatan as $data) : ?>
+					<option value="<?php echo $this->escape($data->id_jenis_pengguna);?>"><?php echo $this->escape($data->nama_jenis_pengguna);?></option>
+					
+				  
+				<?php endforeach; ?>
+				</select>
+				
+				
+				<br><br><p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="name" value="tambah" /></p>
+			  </div>
+			</form><br><br></center>
+      </div>
+	 </div>
+	
+   <?//include "footer.phtml"; ?>

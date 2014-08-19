@@ -1,0 +1,37 @@
+<? include "header.phtml"; ?>
+<? include "menubaradmin.phtml"; ?>
+<?// include "barkanan.phtml"; ?>
+      <div class="content">
+        <h1>Data Pejabat Kelurahan</h1>
+		<table style="width:100%; border-spacing:0;">
+          <tr align ="center">
+			  <th>Nomor</th>
+			  <th>Nama Pejabat</th>
+			  <th>NIP Pejabat</th>
+			  <th>Nama Kelurahan</th>
+			  <th>Jabatan</th>
+			  
+			  <th colspan=2>Aksi</th>
+		  </tr>
+		  <?php $i=1; foreach($this->pejabat as $data) : ?>
+			<tr>
+			<td><?php echo $i;?></td>	
+            <td><?php echo $this->escape($data->nama_pejabat);?></td>
+            <td><?php echo $this->escape($data->nip_pejabat);?></td>
+            <td><?php echo $this->escape($data->nama_kelurahan);?></td>
+            <td><?php echo $this->escape($data->nama_jenis_pengguna);?></td>
+           
+			
+			
+            <td><a href="<?php echo $this->basePath; ?>/home/index/pejabatedit?id_pejabat=<?php echo $this->escape($data->id_pejabat);?>"><img src="<? echo $this->basePath;?>/images/user_edit.png" alt="" title="edit" border="0" /></a></td>
+            <td><a href="<?php echo $this->basePath; ?>/home/index/pejabathapus?id_pejabat=<?php echo $this->escape($data->id_pejabat);?>" class="ask" ><img src="<? echo $this->basePath;?>/images/trash.png" alt="" title="hapus" border="0" /></a></td>
+		
+			
+        </tr>
+		<?php $i++; endforeach; ?>
+          
+        </table>
+      </div>
+	 </div>
+	
+   <?//include "footer.phtml"; ?>

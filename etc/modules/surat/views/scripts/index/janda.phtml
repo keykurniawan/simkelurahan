@@ -1,0 +1,111 @@
+<? include "header.phtml"; ?>
+<? include "menubar.phtml"; ?>
+<?// include "barkanan.phtml"; ?>
+		<?php
+			$i=$this->offset-1;
+		?>
+      <div id="contentadmin">
+        <h1><?php echo $this->surat;?></h1>
+		Pencarian
+	<form action="<? echo $this->basePath;?>/surat/index/pencarianjanda" method="post">
+		<div class="form_settings2">
+				<select name="id_pencarian">
+					<option value="1">No.Surat</option>
+					<option value="2">NIK</option>
+				</select>
+				<input width="1px" type="text" name="pencarian" value="<? echo $this->cari; ?>" placeholder=""/>
+				<input class="submit" type="submit" name="name" value="cari" />
+			 </div>
+		</form><br>
+		<form action="<? echo $this->basePath;?>/surat/index/caripendudukjanda" method="post">
+		<div class="form_settings2">
+				<button class="button">tambah permintaan</button>
+			 </div>
+		</form><br>
+		
+		<table style="width:100%; border-spacing:0;">
+          <tr align ="center">
+			  <th>No</th>
+			  <th>No Surat</th>
+			  <th>Tgl Surat</th>
+			  <th>NIK</th>
+			  <th>Nama Warga</th>
+			  <th>RT / RW</th>
+			  <th>Keperluan</th>
+			  <th colspan=3>Aksi</th>
+		  </tr>
+		 <?php $i=1; foreach($this->permintaan as $data) : ?>
+			<tr>
+			<td><?php echo $i;?></td>		
+            <td><?php echo $this->escape($data->no_surat);?></td>
+            <td><?php echo $this->escape($data->tanggal_surat);?></td>
+            <td><?php echo $this->escape($data->nik);?></td>
+            <td><?php echo $this->escape($data->nama);?></td>
+            <td><?php echo $this->escape($data->rt);echo "/";echo $this->escape($data->rw);?></td>
+            <td><?php echo $this->escape($data->keperluan);?></td>
+           
+			
+			
+            <td><a href="<?php echo $this->basePath; ?>/surat/index/jandaedit?id_permintaan_janda=<?php echo $this->escape($data->id_permintaan_janda);?>"><img src="<? echo $this->basePath;?>/images/user_edit.png" alt="" title="edit" border="0" /></a></td>
+            <td><a href="<?php echo $this->basePath; ?>/surat/index/jandahapus?id_permintaan_janda=<?php echo $this->escape($data->id_permintaan_janda);?>" class="ask"><img src="<? echo $this->basePath;?>/images/trash.png" alt="" title="hapus" border="0" /></a></td>
+			<?php if ($data->status==1){?>
+			 <td><a href="http://127.0.0.1:63611/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Cjanda.rptdesign&__format=pdf&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&1596858883&id_kelurahan=<? echo $this->kelurahan;?>&id_permintaan=<? echo $data->id_permintaan_janda; ?>" target ="_blank" ><img src="<? echo $this->basePath;?>/images/photo.png" alt="" title="cetak" border="0" /></a></td>
+			<?php } ?>
+		
+			
+        </tr>
+		<?php $i++; endforeach; ?>
+          
+        </table>
+		<?php
+		$jumPage = ceil($this->jumData/$this->dataPerPage);
+
+		// menampilkan link previous
+		?>
+		<center>
+		<?php
+		if ($this->noPage > 1) {
+		?>
+		<a href="<?php echo $this->basePath;?>/surat/index/janda?page= <?php echo ($this->noPage-1);?>">&lt;&lt; Prev</a>
+		<?php
+		}
+
+		// memunculkan nomor halaman dan linknya
+
+		 
+		for($page = 1; $page <= $jumPage; $page++)
+		{
+			if ((($page >= $this->noPage - 3) && ($page <= $this->noPage + 3)) || ($page == 1) || ($page == $jumPage))
+			{
+				if (($showPage == 1) && ($page != 2))  echo "...";
+
+				if (($showPage != ($jumPage - 1)) && ($page == $jumPage))  echo "...";
+
+				if ($page == $this->noPage) echo " <b>".$page."</b> ";
+
+				else{
+					?>
+					<a href="<?php echo $this->basePath;?>/surat/index/janda?page=<?php echo $page; ?>"><?php echo $page; ?> </a>
+					<?php
+				}
+				
+
+				$showPage = $page;
+
+			}
+
+		}
+
+		// menampilkan link next
+		if ($this->noPage < $jumPage){
+		?>
+		
+		<a href="<?php echo $this->basePath;?>/surat/index/janda?page=<?php echo ($this->noPage+1);?>">Next &gt;&gt;</a>
+		<?php
+		}
+		?>
+		</center>
+      </div>
+	 </div>
+	
+   <?//include "footer.phtml"; ?>

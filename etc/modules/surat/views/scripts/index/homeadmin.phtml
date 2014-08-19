@@ -1,0 +1,39 @@
+<? include "header.phtml"; ?>
+<? include "menubaradmin.phtml"; ?>
+<?// include "barkanan.phtml"; ?>
+      <div id="contentadmin">
+        <h1>Data Pengguna</h1>
+		<table style="width:100%; border-spacing:0;">
+          <tr align ="center">
+			<th>No</th>
+			  <th>Jenis Pengguna</th>
+			  <th>Kelurahan</th>
+			  <th>Nama</th>
+			  <th>NIP</th>
+			  <th>Username</th>
+			  <th>Password</th>
+			  <th colspan=2>Aksi</th>
+		  </tr>
+		  <?php $i=1; foreach($this->Pengguna as $data) : ?>
+			<tr>
+			<td><?php echo $i; ?></td>
+			<td><?php echo $this->escape($data->nama_jenis_pengguna);?></td>	
+            <td><?php echo $this->escape($data->nama_kelurahan);?></td>
+            <td><?php echo $this->escape($data->nama_pengguna);?></td>
+            <td><?php echo $this->escape($data->nip_pengguna);?></td>
+            <td><?php echo $this->escape($data->username);?></td>
+            <td><?php echo $this->escape($data->password);?></td>
+			
+			
+            <td><a href="<?php echo $this->basePath; ?>/home/index/penggunaedit?id_pengguna=<?php echo $this->escape($data->id_pengguna);?> "title="edit"><img src="<? echo $this->basePath;?>/images/user_edit.png" alt="" title="" border="0" /></a></td>
+            <td><a href="<?php echo $this->basePath; ?>/home/index/penggunahapus?id_pengguna=<?php echo $this->escape($data->id_pengguna);?>" title="hapus"><img src="<? echo $this->basePath;?>/images/trash.png" alt="" title="" border="0" /></a></td>
+		
+			
+        </tr>
+		<?php $i++; endforeach; ?>
+          
+        </table>
+      </div>
+	 </div>
+	
+   <?//include "footer.phtml"; ?>

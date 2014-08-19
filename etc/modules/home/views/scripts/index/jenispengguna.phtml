@@ -1,0 +1,31 @@
+<? include "header.phtml"; ?>
+<? include "menubaradmin.phtml"; ?>
+<?// include "barkanan.phtml"; ?>
+      <div class="content">
+        <h1>Data Jenis Pengguna</h1>
+		<table style="width:100%; border-spacing:0;">
+          <tr align ="center">
+			  <th>Nomor</th>
+			  <th>Nama Jenis Pengguna</th>
+			  
+			  <th colspan=2>Aksi</th>
+		  </tr>
+		  <?php $i=1; foreach($this->jenis_pengguna as $data) : ?>
+			<tr>
+			<td><?php echo $i;?></td>		
+            <td><?php echo $this->escape($data->nama_jenis_pengguna);?></td>
+           
+			
+			
+            <td><a href="<?php echo $this->basePath; ?>/home/index/jenispenggunaedit?id_jenis_pengguna=<?php echo $this->escape($data->id_jenis_pengguna);?>"><img src="<? echo $this->basePath;?>/images/user_edit.png" alt="" title="" border="0" /></a></td>
+            <td><a href="<?php echo $this->basePath; ?>/home/index/jenispenggunahapus?id_jenis_pengguna=<?php echo $this->escape($data->id_jenis_pengguna);?>" class="ask" ><img src="<? echo $this->basePath;?>/images/trash.png" alt="" title="" border="0" /></a></td>
+		
+			
+        </tr>
+		<?php $i++; endforeach; ?>
+          
+        </table>
+      </div>
+	 </div>
+	
+   <?//include "footer.phtml"; ?>

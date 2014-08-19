@@ -1,0 +1,15 @@
+	<nav>
+	<?php
+	echo $this->datauser->nama_pengguna;
+	?>
+        <ul class="sf-menu" id="nav">
+          <li><a href="#">Permintaan Surat</a>
+            <ul>
+              <li><a href="<? echo $this->basePath;?>/home/index/homeketua">Belum ACC</a></li>
+              <li><a href="<? echo $this->basePath;?>/home/index/homeketuaacc">Sudah ACC</a></li>
+            </ul>
+          </li>
+          <li><a href="<? echo $this->basePath;?>/home/index/logout">Logout</a></li>
+        </ul>
+    </nav>
+    </header>

@@ -1,0 +1,24 @@
+<? include "header.phtml"; ?>
+<? include "menubar.phtml"; ?>
+<?// include "barkanan.phtml"; ?>
+      <div id="contentadmin">
+        <h1><?php echo $this->surat;?></h1>
+        <h4><?php echo $this->judul;?></h4>
+		<form action="<? echo $this->basePath;?>/surat/index/permintaandomisiliparpol" method="post">
+		<div class="form_settings2">
+			<table>
+				<tr>
+					<td>NIK</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="nik" value="" placeholder=""/>&nbsp &nbsp <input class="submit" type="submit" title="cari" name="name" value="cari" img="<? echo $this->basePath;?>/images/search.png" /></td>
+				</tr>
+			</table>
+				
+				
+			 </div>
+		</form>
+		<br><br><br>
+      </div>
+	 </div>
+	
+   <?//include "footer.phtml"; ?>

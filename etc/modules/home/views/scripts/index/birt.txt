@@ -1,0 +1,6 @@
+http://127.0.0.1:51282/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Crumashsakit.rptdesign&__format=html&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&-134334986&id_kelurahan=2
+
+
+http://127.0.0.1:51282/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Crumashsakit.rptdesign&__format=html&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&-519021174&id_kelurahan=<? echo $id_kelurahan;?>&id_permintaan=<? echo $id_permintaan_surat; ?>
+
+http://127.0.0.1:63735/viewer/frameset?__report=D%3A%5CProject%5Cworkspace%5Csimkelurahan%5Crumashsakit.rptdesign&__format=html&__svg=false&__locale=en_US&__timezone=Asia%2FBangkok&__masterpage=true&__rtl=false&__cubememsize=10&__resourceFolder=D%3A%5CProject%5Cworkspace%5Csimkelurahan&__dpi=96&1262584327

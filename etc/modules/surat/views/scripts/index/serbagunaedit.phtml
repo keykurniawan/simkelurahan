@@ -1,0 +1,63 @@
+<? include "header.phtml"; ?>
+<? include "menubar.phtml"; ?>
+<?// include "barkanan.phtml"; ?>
+      <div id="contentadmin">
+        <h1><?php echo $this->surat;?></h1>
+		<?php
+			if($this->hasil){
+		?>
+		<form action="<? echo $this->basePath;?>/surat/index/simpanpermintaanserbagunaedit?id_permintaan_serbaguna=<?php echo $this->hasil->id_permintaan_serbaguna; ?>" method="post">
+		<div class="form_settings2">
+			
+			<table>
+				<tr>
+					<td>NIK</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="nik" value="<?php echo $this->hasil->nik; ?>" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Nama</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="nama" value="<?php echo $this->hasil->nama; ?>" placeholder=""/></td>
+				</tr>
+				
+					<td>Nomor Surat</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="no_surat" value="<?php echo $this->hasil->no_surat; ?>" placeholder=""/ onclick="alert=('nomer surat tidak boleh sama')"></td>
+				</tr>
+				<tr>
+					<td>Tanggal Surat</td>
+					<td>:</td>
+					<td><input width="1px" type="date" name="tanggal_surat" value="<?php echo $this->hasil->tanggal_surat; ?>" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td>Nomor Surat Pengantar</td>
+					<td>:</td>
+					<td><input width="1px" type="text" name="no_surat_pengantar" value="<?php echo $this->hasil->no_surat_pengantar; ?>" placeholder=""/>
+					&nbsp &nbsp RT &nbsp &nbsp
+					<input width="0" type="text" name="rt" value="<?php echo $this->hasil->rt; ?>" placeholder=""/>
+					</td>
+				</tr>
+				<tr>
+					<td>Tanggal Surat Pengantar</td>
+					<td>:</td>
+					<td><input width="1px" type="date" name="tanggal_surat_pengantar" value="<?php echo $this->hasil->tanggal_surat_pengantar; ?>" placeholder=""/></td>
+				</tr>
+				
+			</table>
+				
+				<input class="button" type="submit" name="name" value="ubah" />
+			 </div>
+		</form>
+		<?php
+		}else{
+			echo "<h4>Penduduk Belum terdaftar</h4>";
+		
+		?>
+			<h7><a href="<? echo $this->basePath;?>/surat/index/tambahpenduduk"> daftarkan</a></h7>
+		<?php } ?>
+		<br><br><br>
+      </div>
+	 </div>
+	
+   <?//include "footer.phtml"; ?>
